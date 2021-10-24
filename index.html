@@ -1,27 +1,29 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <script src="index.js"></script>
         <title>Calculator</title>
     </head>
     <body>
         <div>
-            <input id="firstNumber" type="text" style="font-size: 22px;" />
+            <input onchange="firstCheck()" type="text" id="firstNumber" style="font-size: 22px;" />
             <label id="mark" style="font-size: 22px;"> &nbsp;</label>
-            <input id="secondNumber" type="text" style="font-size: 22px;" />
+            <input onchange="secondCheck()" type="text" id="secondNumber" style="font-size: 22px;" />
             <label id="equal" style="font-size: 22px;">=</label>
             <label id="score" style="font-size: 22px;"></label>
         </div>
 
-        <div style="margin-top:10px;">
-            <button id="addition" style="margin-right: 10px;">+</button>
-            <button id="subtraction" style="margin-right: 10px;">-</button>
-            <button id="multiplication" style="margin-right: 10px;">*</button>
-            <button id="division" style="margin-right: 10px;">/</button>
-            <button id="exponentiation">x^</button>
+        <div id="actionMenu" style="margin-top:10px;">
+            <button onclick="addition()" id="addition" style="margin-right: 10px;">+</button>
+            <button onclick="subtraction()" id="subtraction" style="margin-right: 10px;">-</button>
+            <button onclick="multiplication()" id="multiplication" style="margin-right: 10px;">*</button>
+            <button onclick="division()" id="division" style="margin-right: 10px;">/</button>
+            <button onclick="exponentiation()" id="exponentiation">x^</button>
+            <button onclick="distance()" id="distance">A<--->B</button>
         </div>
 
-        <p id="notification" style="color:red;font-style:italic;"></p>
+        <p id="result" type="text" style="color:red;font-style:italic;"></p>
     </body>
 </html>
+
+<script type="text/javascript" src="index.js"></script>
